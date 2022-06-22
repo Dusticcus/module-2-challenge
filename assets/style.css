@@ -1,3 +1,6 @@
+/* Where you see both DISPLAY: FLEX; and also POSITION:RELATIVE in the same class/ID,
+ this is simply to allow the child element to be absolute. Mostly for image labels. */
+
 :root {
     --mainBGColor: #ededf6;
     --alternateBGColor: #92cccd;
@@ -13,13 +16,13 @@
     margin: 0;
 }
 
-/* body {
+body {
     background-color: var(--mainBGColor);
     background-image: var(--backgroundLinearGradient);
     color: var(--navbarColor);
     padding: 0;
     margin: 0;
-} */
+}
 
 h2 {
     line-height: .75;
@@ -124,6 +127,7 @@ main {
     flex-basis: 75%;
 }
 
+/* Left hand side aside box styling */
 .asideBox {
     font-family: var(--mainFontStyle);
     font-size: 2vw;
@@ -243,21 +247,26 @@ footer {
     border-top: 5px solid var(--navbarColor);
 }
 
-/* On screens that are 768 or less */
+/* On screens that are 768 or LESS */
+/* This breaks the WORK images into a column and allows them to consume all available width. */
 @media screen and (max-width: 786px) {
     #work {
-      flex-direction: column;
+        flex-direction: column;
     }
+
     .imageWrapper {
         width: auto;
     }
-  }
+}
 
-  @media screen and (min-width: 787px) {
+/* On screens that are 787 or MORE */
+/* This sets the WORK images back to their original positions. */
+@media screen and (min-width: 787px) {
     #work {
         flex-direction: row;
-      }
-      .imageWrapper {
-          width: 48%;
-      }
-  }
+    }
+
+    .imageWrapper {
+        width: 48%;
+    }
+}
