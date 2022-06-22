@@ -1,0 +1,244 @@
+:root {
+    --mainBGColor: #ededf6;
+    --alternateBGColor: #92cccd;
+    --mainTextColor: #31343d;
+    --navbarColor: #31343d;
+    --mainFontStyle: sans-serif;
+    --altFontStyle: sans-serif;
+}
+
+/* Native Browser Element Style Changes */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--mainBGColor);
+    background-image: var(--backgroundLinearGradient);
+    color: var(--navbarColor);
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    line-height: .75;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p {
+    font-size: 1.25vw;
+}
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6vw;
+    z-index: 9999;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mainFontStyle);
+    background-color: var(--navbarColor);
+}
+
+#navbar h1 {
+    font-size: 2.5vw;
+    background-color: var(--alternateBGColor);
+    padding-left: 3vw;
+    color: var(--navbarColor);
+}
+
+#navLinks {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+.navItems {
+    font-size: 1.5vw;
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--alternateBGColor);
+    white-space: nowrap;
+    border-bottom: .5vw solid teal;
+}
+
+/* Banner Styling */
+#banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 16vw;
+    margin-top: 6vw;
+    margin-bottom: 3vw;
+    background-image: url(./images/banner.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+#bannerQuote {
+    height: 6vw;
+    line-height: 6vw;
+    /* width: 16vw; */
+    position: absolute;
+    bottom: 2vw;
+    right: 5vw;
+    border: px solid var(--mainBGColor);
+    background-color: var(--alternateBGColor);
+
+    text-align: center;
+    font-size: 2vw;
+    font-family: var(--mainFontStyle);
+
+    color: var(--navbarColor);
+}
+
+/* Box containing all Main Content */
+main {
+    /* border: 5px solid green; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    display: flex;
+    font-family: var(--altFontStyle);
+    margin-bottom: 1vw;
+}
+
+.mainContentSizing {
+    display: flex;
+    flex-basis: 75%;
+}
+
+.asideBox {
+    font-family: var(--mainFontStyle);
+    font-size: 2vw;
+    text-align: right;
+    flex-basis: 25%;
+    min-width: 25%;
+    border-right: 3px solid var(--mainTextColor);
+}
+
+.asideHeader {
+    padding-right: 1vw;
+    font-size: 4vw;
+    color: var(--navbarColor);
+}
+
+/* About Me Section Styling */
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+}
+
+#aboutMe p {
+    padding-left: 15px;
+}
+
+/* My Work Section Styling */
+#work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1vw;
+}
+
+.imageWrapper {
+    position: relative;
+    display: flex;
+    width: 48%;
+    margin-bottom: 1.2vw;
+    border: 5px solid var(--alternateBGColor);
+}
+
+.imageText {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    height: 4vw;
+    line-height: 4vw;
+    min-width: 0;
+    background-color: var(--alternateBGColor);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: center;
+    font-size: 2vw;
+    color: var(--navbarColor);
+}
+
+
+#work img {
+    min-width: 0;
+    width: 100%;
+    -webkit-filter: blur(.5);
+    /* Chrome, Safari, Opera */
+    filter: blur(2px);
+}
+
+
+#work img:hover {
+    -webkit-filter: blur(0px);
+    /* Chrome, Safari, Opera */
+    filter: blur(0px);
+}
+
+/* Overriding .imageWrapper's width and centering flex content  */
+#workFeatured {
+    display: flex;
+    height: 30vw;
+    line-height: 30vw;
+    width: 100%;
+    justify-content: center;
+}
+
+.imageText.imageFeatured {
+    bottom: 15%;
+}
+
+
+/* Contact Me Section Styling */
+#contactMe {
+    margin: 1vw;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid orange; */
+}
+
+#contactMe ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contactMe li {
+    border-bottom: 2px solid var(--mainTextColor);
+    font-size: 1.5vw;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    border-top: 5px solid var(--navbarColor);
+}
