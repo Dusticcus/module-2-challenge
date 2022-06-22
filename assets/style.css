@@ -13,13 +13,13 @@
     margin: 0;
 }
 
-body {
+/* body {
     background-color: var(--mainBGColor);
     background-image: var(--backgroundLinearGradient);
     color: var(--navbarColor);
     padding: 0;
     margin: 0;
-}
+} */
 
 h2 {
     line-height: .75;
@@ -242,3 +242,22 @@ footer {
     text-align: center;
     border-top: 5px solid var(--navbarColor);
 }
+
+/* On screens that are 768 or less */
+@media screen and (max-width: 786px) {
+    #work {
+      flex-direction: column;
+    }
+    .imageWrapper {
+        width: auto;
+    }
+  }
+
+  @media screen and (min-width: 787px) {
+    #work {
+        flex-direction: row;
+      }
+      .imageWrapper {
+          width: 48%;
+      }
+  }
