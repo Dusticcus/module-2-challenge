@@ -6,9 +6,11 @@
     --alternateBGColor: #92cccd;
     --mainTextColor: #31343d;
     --navbarColor: #31343d;
-    --mainFontStyle: sans-serif;
+    --mainFontStyle: 'Montserrat', sans-serif;
     --altFontStyle: sans-serif;
 }
+
+font-family: 'Montserrat', sans-serif;
 
 /* Native Browser Element Style Changes */
 * {
@@ -92,12 +94,11 @@ a {
 }
 
 #bannerQuote {
-    height: 6vw;
-    line-height: 6vw;
-    /* width: 16vw; */
     position: absolute;
     bottom: 2vw;
     right: 5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     border: px solid var(--mainBGColor);
     background-color: var(--alternateBGColor);
 
@@ -141,6 +142,7 @@ main {
     padding-right: 1vw;
     font-size: 4vw;
     color: var(--navbarColor);
+    line-height: 1vw;
 }
 
 /* About Me Section Styling */
@@ -176,7 +178,7 @@ main {
     left: 0;
     bottom: 20%;
     height: 4vw;
-    line-height: 4vw;
+    /* line-height: 4vw; */
     min-width: 0;
     background-color: var(--alternateBGColor);
     padding-left: 1vw;
@@ -186,6 +188,10 @@ main {
     color: var(--navbarColor);
 }
 
+.imageText p {
+    margin: 0;
+    padding: 0;
+}
 
 #work img {
     min-width: 0;
@@ -206,7 +212,6 @@ main {
 #workFeatured {
     display: flex;
     height: 30vw;
-    line-height: 30vw;
     width: 100%;
     justify-content: center;
 }
