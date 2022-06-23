@@ -2,10 +2,12 @@
  this is simply to allow the child element to be absolute. Mostly for image labels. */
 
 :root {
-    --mainBGColor: #ededf6;
-    --alternateBGColor: #92cccd;
-    --mainTextColor: #31343d;
-    --navbarColor: #31343d;
+    --mainBGColor: #eeeef7;
+    --alternateBGColor: #92ccce;
+    --navbarColor: #31353d;
+    
+    --mainTextColor: #445877;
+
     --mainFontStyle: 'Montserrat', sans-serif;
     --altFontStyle: sans-serif;
 }
@@ -21,9 +23,10 @@ font-family: 'Montserrat', sans-serif;
 body {
     background-color: var(--mainBGColor);
     background-image: var(--backgroundLinearGradient);
-    color: var(--navbarColor);
+    color: var(--mainTextColor);
     padding: 0;
     margin: 0;
+    margin-top: 6vw;
 }
 
 h2 {
@@ -34,6 +37,7 @@ h2 {
 
 p {
     font-size: 1.25vw;
+    margin-bottom: 0;
 }
 
 /* Navbar Styling */
@@ -74,10 +78,12 @@ a {
 .navItems {
     font-size: 1.5vw;
     margin-right: 15px;
+    padding-left: 1vw;
+    padding-right: 1vw;;
     text-decoration: none;
     color: var(--alternateBGColor);
     white-space: nowrap;
-    border-bottom: .5vw solid teal;
+    border-bottom: .25vw solid teal;
 }
 
 /* Banner Styling */
@@ -141,7 +147,7 @@ main {
 .asideHeader {
     padding-right: 1vw;
     font-size: 4vw;
-    color: var(--navbarColor);
+    color: var(--mainTextColor);
     line-height: 1vw;
 }
 
