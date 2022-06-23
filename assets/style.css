@@ -12,12 +12,14 @@
     --altFontStyle: sans-serif;
 }
 
-font-family: 'Montserrat', sans-serif;
-
 /* Native Browser Element Style Changes */
 * {
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-padding-top: 6vw;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 }
 
 h2 {
-    line-height: .75;
+    /* line-height: .75; */
     display: inline-block;
     vertical-align: middle;
 }
@@ -61,6 +63,7 @@ nav {
     font-size: 2.5vw;
     background-color: var(--alternateBGColor);
     padding-left: 3vw;
+    padding-right: 1vw;
     color: var(--navbarColor);
 }
 
@@ -127,6 +130,7 @@ main {
     display: flex;
     font-family: var(--altFontStyle);
     margin-bottom: 1vw;
+    margin-right: 1vw;
 }
 
 .mainContentSizing {
@@ -148,7 +152,7 @@ main {
     padding-right: 1vw;
     font-size: 4vw;
     color: var(--mainTextColor);
-    line-height: 1vw;
+    /* line-height: 1vw; */
 }
 
 /* About Me Section Styling */
